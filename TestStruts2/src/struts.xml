@@ -28,9 +28,18 @@
 		<action name="toLogin">
 			<result name="success" type="dispatcher">/jsp/formlogin.jsp</result>
 		</action>
+		
+		<action name="doLogin" class="fr.controller.Useraction">
+			<result name="input">/jsp/errorlogin.jsp</result>
+			<result name="error">/jsp/forbidden.jsp</result>
+			<result name="success">/jsp/successlogin.jsp</result>
+		</action>
+		
+		<action name="doLogout">
+			<result name="success" type="dispatcher">/jsp/disconnect.jsp</result>
+		</action>
+		
 	</package>
-
-	<include file="example.xml" />
 
 	<!-- Add packages here -->
 
