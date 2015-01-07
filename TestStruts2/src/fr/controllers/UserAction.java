@@ -1,7 +1,7 @@
 /**
  * 
  */
-package fr.controller;
+package fr.controllers;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -9,9 +9,13 @@ import com.opensymphony.xwork2.ActionSupport;
  * @author dao303
  *
  */
-public class Useraction extends ActionSupport {
+public class UserAction extends ActionSupport {
 
-	String currentError;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 642222817797870387L;
+
 	String login;
 	String password;
 
@@ -43,30 +47,16 @@ public class Useraction extends ActionSupport {
 		this.password = password;
 	}
 
-	public Useraction() {
-		addFieldError("oo", "error message");
-	}
 
 	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1066689614258122078L;
-
-	/**
-	 * @param login
-	 * @param password
 	 * @return
 	 */
-//	public static String doLogin (String login, String password) {
-//		String check = ERROR;
-//		if (login=="toto") {
-//			check = SUCCESS;
-//		}
-//		return check;
-//	}
-	
-	public String doLogin() {
-		return SUCCESS;
+	public String doLogin () {
+		String check = ERROR;
+		if (login.equals("toto")) {
+			check = SUCCESS;
+		}
+		return check;
 	}
 
 }

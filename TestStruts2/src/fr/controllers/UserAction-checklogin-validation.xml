@@ -1,0 +1,17 @@
+
+<!-- Add the following DOCTYPE declaration as first line of your XXX-validation.xml 
+	file: -->
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN" "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<field name="login">
+		<field-validator type="requiredstring">
+			<message>You must enter a name</message>
+		</field-validator>
+	</field>
+	<field name="password">
+		<field-validator type="requiredstring">
+			<message>You must enter a password</message>
+		</field-validator>
+	</field>
+</validators>

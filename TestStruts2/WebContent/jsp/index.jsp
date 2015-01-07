@@ -10,6 +10,5 @@
 </head>
 <body>
 	<a href="toLogin">Aller au formulaire de login</a>
-	<s:debug></s:debug>
 </body>
 </html>
