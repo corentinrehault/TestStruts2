@@ -3,6 +3,8 @@
  */
 package fr.controllers;
 
+import java.sql.SQLException;
+
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -52,8 +54,16 @@ public class ApplicationListener implements ServletContextListener {
 				System.out.println("il n'y a pas de source de données pour le projet TestStruts2.");
 			} else {
 				System.out.println("DataSource : TestStruts2 chargé !");
+				servletContext.setAttribute("dataSource2", dataSource);
+				
+				try {
+					System.out.println("?????????" + !dataSource.getConnection().isClosed());
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
-			servletContext.setAttribute("dataSource", dataSource);
+			
 		} catch(NamingException e) {
 			throw new RuntimeException();
 		} finally {

@@ -9,6 +9,7 @@
 <body>
 Vous êtes bien identifié.<br>
 Nombre d'utilisateurs connecté : <br>
+<a href="Lister_Client">Accéder à la base clients</a>
 <a href="doLogout">Quitter</a>
 </body>
 </html>

@@ -9,7 +9,7 @@ package fr.beans;
  */
 public class Client {
 
-	private String num;
+	private int num;
 	private String nom;
 	private String prenom;
 	private String adresse;
@@ -19,13 +19,13 @@ public class Client {
 	/**
 	 * @return the num
 	 */
-	public String getNum() {
+	public int getNum() {
 		return num;
 	}
 	/**
 	 * @param num the num to set
 	 */
-	public void setNum(String num) {
+	public void setNum(int num) {
 		this.num = num;
 	}
 	/**

@@ -39,6 +39,29 @@
 		<action name="doLogout">
 			<result name="success" type="dispatcher">/jsp/disconnect.jsp</result>
 		</action>
+		
+		<action name="Lister_Client" class="fr.controllers.ClientAction" method="lister">
+            <result>/jsp/clientlist.jsp</result>
+        </action>
+        
+        <action name="Ajouter_Client" class="fr.controllers.ClientAction" method="ajouter">
+            <result name="input">/jsp/clientlist.jsp</result>
+            <result name="success" type="redirectAction">Lister_Client</result>
+        </action>
+        
+        <action name="Editer_Client" class="fr.controllers.ClientAction" method="editer">
+			<interceptor-ref name="paramsPrepareParamsStack"/>
+            <result name="success">/jsp/editclient.jsp</result>
+        </action>
+        
+        <action name="Modifier_Client" class="fr.controllers.ClientAction" method="modifier">
+        	<result name="input">/jsp/editclient.jsp</result>
+            <result name="success" type="redirectAction">Lister_Client</result>
+        </action>
+        
+        <action name="Supprimer_Client" class="fr.controllers.ClientAction" method="supprimer">
+            <result name="success" type="redirectAction">Lister_Client</result>
+        </action>
 
 	</package>
 
